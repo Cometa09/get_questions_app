@@ -1,6 +1,7 @@
 {
   "name": "app",
   "dependencies": {
+    "@hotwired/turbo-rails": "^7.3.0",
     "@popperjs/core": "^2.11.6",
     "@rails/ujs": "^6.0.0",
     "bootstrap": "^5.2.3",
