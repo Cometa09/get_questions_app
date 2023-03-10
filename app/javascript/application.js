@@ -2,6 +2,8 @@
 // import * as bootstrap from "bootstrap"
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
+import "@hotwired/turbo-rails"
 
 Rails.start()
-Turbolinks.start()import "@hotwired/turbo-rails"
+Turbolinks.start()
+
