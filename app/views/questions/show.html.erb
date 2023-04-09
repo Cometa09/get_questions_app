@@ -19,10 +19,12 @@
 
 <h2 class="mb-3">Write your answer</h2>
 
+   <%= render 'answers/form' %>
+
 <h2 class="mt-5">Answers</h2>
 
 <% @answers.each do |answer| %>
-   <article class="mb-3 card">
+   <article class="mb-3 card" id="answer-<%= answer.id %>">
       <div class="card-body">
          <section class="card-text">
             <small><time datetime= "<%= answer.formatted_created_at %>">

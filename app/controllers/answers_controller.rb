@@ -9,7 +9,7 @@ class AnswersController < ApplicationController
   def update
     if @answer.update answer_params
       flash[:success] = "Answer updated!"
-      redirect_to questions_path(@question)
+      redirect_to question_path(@question, anchor: "answer-#{@answer.id}")
     else
       render :edit
     end
@@ -44,6 +44,6 @@ class AnswersController < ApplicationController
   end
 
   def set_answer!
-    @answer = @question.answers.find params[:id]
+    @answer = @question.answers.find(params[:id])
   end
 end
