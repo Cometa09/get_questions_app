@@ -70,6 +70,7 @@ GEM
     bootsnap (1.16.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    cgi (0.3.6)
     concurrent-ruby (1.2.2)
     crass (1.0.6)
     cssbundling-rails (1.1.2)
@@ -153,6 +154,9 @@ GEM
     rake (13.0.6)
     reline (0.3.3)
       io-console (~> 0.5)
+    sanitize (6.0.1)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.12.0)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -184,6 +188,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  cgi
   cssbundling-rails
   debug
   faker (~> 3)
@@ -191,6 +196,7 @@ DEPENDENCIES
   jsbundling-rails
   puma (~> 6.0)
   rails (~> 7.0.4, >= 7.0.4.2)
+  sanitize
   sprockets-rails
   sqlite3 (~> 1.4)
   turbo-rails (~> 1.0)

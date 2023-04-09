@@ -41,6 +41,8 @@ gem "bootsnap", require: false
 
 gem "faker",  "~> 3"
 
+gem 'sanitize'
+
 gem 'turbo-rails', '~> 1.0'
 # Use Sass to process CSS
 # gem "sassc-rails"
