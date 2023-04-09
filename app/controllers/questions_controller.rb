@@ -3,7 +3,7 @@ class QuestionsController < ApplicationController
   # launch this method before others only for...
 
   def index
-    @questions = Question.all
+    @questions = Question.order(created_at: :desc).page params[:page]
   end
 
   def show
