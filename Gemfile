@@ -41,7 +41,7 @@ gem "bootsnap", require: false
 
 gem 'sanitize'
 
-gem 'kaminari', '~> 1.2'
+gem 'pagy', '~> 6'
 
 gem 'turbo-rails', '~> 1.0'
 # Use Sass to process CSS

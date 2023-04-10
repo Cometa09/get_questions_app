@@ -3,11 +3,9 @@
 
 <h1 class="mb-4">Questions</h1>
 
-<%= link_to 'New question', new_question_path, class: 'btn btn-primary btn-lg' %>
+<%= link_to 'New question', new_question_path, class: 'btn btn-primary btn-lg, mb-3' %>
 
-<p>
-  <%= paginate @questions %>
-</p>
+<%== pagy_bootstrap_nav @pagy %>
 
 <% @questions.each do |question| %>
   <article class="card mt-3" id="question-<%= question.id %>">
@@ -32,6 +30,4 @@
   </article>
 <% end %>
 
-<p>
-  <%= paginate @questions %>
-</p>
+<%== pagy_bootstrap_nav @pagy %>

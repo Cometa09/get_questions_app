@@ -3,13 +3,12 @@ class QuestionsController < ApplicationController
   # launch this method before others only for...
 
   def index
-    @questions = Question.order(created_at: :desc).page params[:page]
+    @pagy,  @questions = pagy Question.order(created_at: :desc)
   end
 
   def show
     @answer = @question.answers.build
-    #@answers = Answer.order created_at: :desc
-    @answers = @question.answers.order created_at: :desc
+    @pagy, @answers = pagy @question.answers.order created_at: :desc
   end
 
   def new
