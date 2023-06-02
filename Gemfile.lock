@@ -95,7 +95,7 @@ GEM
       i18n (>= 1.8.11, < 2)
     globalid (1.1.0)
       activesupport (>= 5.0)
-    i18n (1.13.0)
+    i18n (1.14.0)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
     irb (1.6.4)
@@ -189,6 +189,9 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    valid_email2 (4.0.6)
+      activemodel (>= 3.2)
+      mail (~> 2.5)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -219,6 +222,7 @@ DEPENDENCIES
   sqlite3 (~> 1.4)
   turbo-rails (~> 1.0)
   tzinfo-data
+  valid_email2 (~> 4)
   web-console
 
 RUBY VERSION

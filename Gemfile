@@ -44,6 +44,8 @@ gem 'sanitize'
 gem 'pagy', '~> 6'
 gem 'draper'
 
+gem "valid_email2", '~> 4'
+
 gem 'turbo-rails', '~> 1.0'
 # Use Sass to process CSS
 # gem "sassc-rails"
