@@ -5,6 +5,10 @@ module ApplicationHelper
     raw(pagy_bootstrap_nav(obj)) if obj.pages > 1
   end
 
+  def formatted_created_at
+    created_at.strftime('%Y-%m-%d %H:%M:%S')
+  end
+
   def nav_tab(title, url, options = {})
     current_page = options.delete :current_page
 
