@@ -1,10 +1,11 @@
+# frozen_string_literal: true
+
 class QuestionsController < ApplicationController
-  
   before_action :set_question!, only: %i[show destroy edit update]
   # launch this method before others only for...
 
   def index
-    @pagy,  @questions = pagy Question.order(created_at: :desc)
+    @pagy, @questions = pagy Question.order(created_at: :desc)
     @questions = @questions.decorate
   end
 
@@ -19,22 +20,21 @@ class QuestionsController < ApplicationController
     @question = Question.new
   end
 
+  def edit; end
+
   def create
     @question = Question.new question_params
     if @question.save
-      flash[:success] = "Question created!"
+      flash[:success] = 'Question created!'
       redirect_to questions_path
     else
       render :new
     end
   end
 
-  def edit
-  end
-
   def update
     if @question.update question_params
-      flash[:success] = "Question updated!"
+      flash[:success] = 'Question updated!'
       redirect_to questions_path(anchor: "question-#{@question.id}")
     else
       render :edit
@@ -43,7 +43,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    flash[:success] = "Question deleted!"
+    flash[:success] = 'Question deleted!'
     redirect_to questions_path
   end
 
