@@ -21,13 +21,4 @@ class SessionsController < ApplicationController
     flash[:success] = 'See you later!'
     redirect_to root_path
   end
-
-  private
-
-  def do_sign_in(user)
-    sign_in user
-    remember(user) if params[:remember_me] == '1'
-    flash[:success] = "Welcome back, #{user.name}!"
-    redirect_to root_path
-  end
 end
