@@ -12,7 +12,7 @@ module Authentication
     def current_user
       user = session[:user_id].present? ? user_from_session : user_from_token
 
-      @current_user ||= user.decorate
+      @current_user ||= user&.decorate
     end
 
     def user_from_session
