@@ -1,0 +1,12 @@
+wb = xlsx_package.workbook
+s = wb.styles
+
+highlight_cell = s.add_style(bg_color: "EFC376")
+right_cell = s.add_style(border: Axlsx::STYLE_THIN_BORDER,
+        alignment: { horizontal: :right })
+date_cell = s.add_style(format_code: "yyyy-mm-dd")
+
+wb.add_worksheet(name: "User") do |sheet|
+  sheet.add_row ["ID", "Name", "Email", "Created_at", "Updated_at"], style: [highlight_cell, highlight_cell, highlight_cell, highlight_cell, highlight_cell]
+  sheet.add_row [user.id, user.name, user.email, user.created_at, user.updated_at], style: [right_cell, right_cell, right_cell, right_cell, right_cell]
+end

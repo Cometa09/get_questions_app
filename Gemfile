@@ -43,12 +43,16 @@ gem 'bootsnap', require: false
 
 gem 'sanitize'
 
+gem 'activerecord-import', '~> 1.4'
+gem 'caxlsx'
+gem 'caxlsx_rails'
 gem 'draper'
 gem 'pagy', '~> 6'
-
-gem 'valid_email2', '~> 4'
+gem 'rubyXL', '~> 3.4'
+gem 'rubyzip', '~> 2'
 
 gem 'turbo-rails', '~> 1.0'
+gem 'valid_email2', '~> 4'
 # Use Sass to process CSS
 # gem "sassc-rails"
 
