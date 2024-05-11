@@ -92,4 +92,10 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.hosts = [
+     "rails.cometa-project.ru",     # Allow requests from example.com
+     /.*\.cometa-project\.ru/ # Allow requests from subdomains like `www.example.com`
+   ]
+
 end
