@@ -16,8 +16,15 @@ module Admin
 
     def create
       if params[:archive].present?
-        UserBulkService.call params[:archive]
-        flash[:success] = 'Users imported!'
+        service = UserBulkService.call(params[:archive])
+
+        if service&.error_message
+          flash[:warning] = service.error_message
+        else
+          flash[:success] = t('.success')
+        end
+      else
+        flash[:warning] = 'Please select a file to upload.'
       end
 
       redirect_to admin_users_path
@@ -30,7 +37,7 @@ module Admin
         User.order(created_at: :desc).each do |user|
           zos.put_next_entry "user_#{user.id}.xlsx"
           zos.print render_to_string(
-            layout: false, handlers: [:axlsx], formats: [:xlsx], template: 'admin/users/user', locals: { user: user }
+            layout: false, handlers: [:axlsx], formats: [:xlsx], template: 'admin/users/user', locals: { user: }
           )
         end
       end
