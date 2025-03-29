@@ -94,8 +94,8 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.hosts = [
-     "rails.cometa-project.ru",     # Allow requests from example.com
-     /.*\.cometa-project\.ru/ # Allow requests from subdomains like `www.example.com`
-   ]
-
+    'api.cometa-project.ru',
+    'localhost:3000' # Allow requests from example.com
+    # Allow requests from subdomains like `www.example.com`
+  ]
 end

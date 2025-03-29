@@ -31,3 +31,7 @@
 
 en:
   hello: "Hello world"
+
+  admin:
+    users:
+      success: "Users imported successfully"

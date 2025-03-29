@@ -71,8 +71,8 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   config.hosts = [
-     "rails.cometa-project.ru",     # Allow requests from example.com
-     /.*\.cometa-project\.ru/ # Allow requests from subdomains like `www.example.com`
-   ]
-
+    'api.cometa-project.ru',
+    'localhost:3000' # Allow requests from example.com
+    # Allow requests from subdomains like `www.example.com`
+  ]
 end

@@ -5,8 +5,6 @@ module Authentication
 
   # rubocop:disable Metrics/BlockLength
   included do
-    # rubocop:enable Metrics/BlockLength
-
     private
 
     def current_user
@@ -36,14 +34,14 @@ module Authentication
     def require_authentication
       return if user_signed_in?
 
-      flash[:warning] = 'You are not signed in!'
+      flash[:warning] = t 'global.flash.not_signed_in'
       redirect_to root_path
     end
 
     def require_no_authentication
       return unless user_signed_in?
 
-      flash[:warning] = 'You are already signed in!'
+      flash[:warning] = t 'global.flash.already_signed_in'
       redirect_to root_path
     end
 
@@ -71,4 +69,5 @@ module Authentication
 
     helper_method :current_user, :user_signed_in?
   end
+  # rubocop:enable Metrics/BlockLength
 end
